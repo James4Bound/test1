@@ -97,7 +97,7 @@ if [[ -z "$INTERNAL_IP" ]]; then
 fi
 
 # PORTS
-PORT=${PORT:-"443"}
+PORT=443#PORT=${PORT:-"443"}
 INTERNAL_PORT=${INTERNAL_PORT:-"65443"}
 
 # Report final configuration
@@ -106,8 +106,8 @@ echo "[*] Final configuration:"
 I=1
 echo "$SECRET" | tr ',' '\n' | while read S; do
   echo "[*]   Secret $I: $S"
-  echo "[*]   tg:// link for secret $I auto configuration: tg://proxy?server=${IP}&port=${PORT}&secret=fe${S}"
-  echo "[*]   t.me link for secret $I: https://t.me/proxy?server=${IP}&port=${PORT}&secret=fe${S}"
+  echo "[*]   tg:// link for secret $I auto configuration: tg://proxy?server=${IP}&port=${PORT}&secret=ee${S}"
+  echo "[*]   t.me link for secret $I: https://t.me/proxy?server=${IP}&port=${PORT}&secret=ee${S}"
   I=$(($I+1))
 done
 
@@ -126,7 +126,7 @@ exec /bin/mtproto-proxy \
     -p "$INTERNAL_PORT" \
     -H "$PORT" \
     -M "$WORKERS" \
-    -S "$SECRET" \
+    -S "76c59bce782e456cc4af380c50ecddae" \
     -C 60000 \
     --aes-pwd "$PROXY_SECRET_FILE" \
     --allow-skip-dh \
