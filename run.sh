@@ -122,7 +122,7 @@ sleep 1
 
 # Start mtproto-proxy
 exec /bin/mtproto-proxy \
-    -u root \
+    -u nobody \
     -p "$INTERNAL_PORT" \
     -H "$PORT" \
     -M "$WORKERS" \
