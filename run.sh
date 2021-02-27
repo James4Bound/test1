@@ -97,7 +97,7 @@ if [[ -z "$INTERNAL_IP" ]]; then
 fi
 
 # PORTS
-#PORT=${PORT:-"443"}
+PORT=${PORT:-"443"}
 INTERNAL_PORT=${INTERNAL_PORT:-"65443"}
 
 # Report final configuration
