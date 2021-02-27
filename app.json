@@ -1,0 +1,20 @@
+{
+  "name": "MTProxy",
+  "description": "MTProxy for HEROKU",
+  "keywords": [
+    "telegram",
+    "indian",
+    "mtproxy",
+    "heroku",
+    "mtproto"
+  ],
+  "repository": "https://github.com/dnsxxx18/MTProxy-1",
+  "website": "https://github.com/dnsxxx18/MTProxy-1",
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "stack": "container"
+}
