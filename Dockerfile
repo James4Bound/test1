@@ -25,6 +25,6 @@ RUN chmod +x /bin/mtproto-proxy
 EXPOSE 443 8888
 VOLUME /data
 WORKDIR /data
-ENTRYPOINT /run.sh
+#ENTRYPOINT /run.sh
 
-#CMD /run.sh
+CMD /run.sh
