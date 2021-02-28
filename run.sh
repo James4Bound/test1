@@ -122,11 +122,11 @@ sleep 1
 
 # Start mtproto-proxy
 exec /bin/mtproto-proxy \
-    -u nobody \
+    -u root \
     -p "$INTERNAL_PORT" \
     -H "$PORT" \
     -M "$WORKERS" \
-    -S "76c59bce782e456cc4af380c50ecddae" \
+    -S "76c59bce782e456c" \
     -C 60000 \
     --aes-pwd "$PROXY_SECRET_FILE" \
     --allow-skip-dh \
