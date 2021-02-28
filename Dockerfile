@@ -21,6 +21,9 @@ COPY --from=0 /MTProxy/objs/bin/mtproto-proxy /bin
 EXPOSE 443 8888
 VOLUME /data
 WORKDIR /data
-ENTRYPOINT /run.sh
+#ENTRYPOINT /run.sh
 
 COPY run.sh /
+
+chmod +x /run.sh
+CMD /run.sh
