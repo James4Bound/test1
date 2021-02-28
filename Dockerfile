@@ -25,5 +25,5 @@ WORKDIR /data
 
 COPY run.sh /
 
-chmod +x /run.sh
+RUN chmod +x /run.sh
 CMD /run.sh
