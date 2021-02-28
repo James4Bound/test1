@@ -17,13 +17,14 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt
 
 COPY --from=0 /MTProxy/objs/bin/mtproto-proxy /bin
+RUN chmod +x /run.sh
+RUN chmod +x /bin/mtproto-proxy
 
 EXPOSE 443 8888
 VOLUME /data
 WORKDIR /data
-#ENTRYPOINT /run.sh
+ENTRYPOINT /run.sh
 
 COPY run.sh /
 
-RUN chmod +x /run.sh
-CMD /run.sh
+#CMD /run.sh
