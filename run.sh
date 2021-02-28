@@ -125,7 +125,7 @@ sleep 1
 exec /bin/mtproto-proxy \
     -p "$INTERNAL_PORT" \
     -H "$PORT" \
-    -u root \
+    -u nobody \
     -S "76c59bce782e456c76c59bce782e456c" \
     -C 60000 \
     --aes-pwd "$PROXY_SECRET_FILE" \
