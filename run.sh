@@ -125,13 +125,12 @@ sleep 1
 exec /bin/mtproto-proxy \
     -p "$INTERNAL_PORT" \
     -H "$PORT" \
-    -M "$WORKERS" \
     -u root \
     -S "76c59bce782e456c76c59bce782e456c" \
     -C 60000 \
     --aes-pwd "$PROXY_SECRET_FILE" \
     --allow-skip-dh \
-    --nat-info "$INTERNAL_IP:$IP" \
     $TAG_CMD \
     $ARGS \
-    "$PROXY_CONFIG_FILE"
+    "$PROXY_CONFIG_FILE" \
+    -M "$WORKERS"
